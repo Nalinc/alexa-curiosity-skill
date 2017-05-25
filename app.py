@@ -5,7 +5,7 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 app = Flask(__name__)
 
 english_bot = ChatBot("English Bot")
-english_bot.set_trainer(ChatterBotCorpusTrainer)
+english_bot.set_trainer(	)
 english_bot.train("chatterbot.corpus.english")
 
 @app.route("/")
@@ -17,5 +17,5 @@ def get_raw_response(query):
     return str(english_bot.get_response(query))
 
 
-if __name__ == "__main__":
-    app.run()
+# if __name__ == "__main__":
+#     app.run()
